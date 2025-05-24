@@ -91,7 +91,6 @@ public class GameManager : MonoBehaviour
             deckDisplay.Populate(deck);
             takenCard = null;
             takenWildCard = null;
-            Debug.Log(takenCard);
             yield return new WaitUntil(() => takenCard != null);
 
 
