@@ -1,16 +1,13 @@
+using TMPro;
 using UnityEngine;
 
 public class GameDisplay : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private TMP_Text cardText;
 
-    // Update is called once per frame
-    void Update()
+    public void DisplayText(string text)
     {
-        
+        cardText.text = text;
     }
 }

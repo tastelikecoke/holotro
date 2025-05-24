@@ -1576,6 +1576,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &519776240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 519776241}
+  m_Layer: 5
+  m_Name: Center
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &519776241
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519776240}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 688074886}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -26, y: -3.619995}
+  m_SizeDelta: {x: -1820, y: -980}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &548426609
 GameObject:
   m_ObjectHideFlags: 0
@@ -1830,7 +1865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 804857600}
-  center: {fileID: 2122811110}
+  center: {fileID: 519776241}
   red: {fileID: 954698947}
   yellow: {fileID: 593937906}
   green: {fileID: 641686647}
@@ -2320,6 +2355,7 @@ RectTransform:
   - {fileID: 198428731}
   - {fileID: 882369847}
   - {fileID: 1882243492}
+  - {fileID: 519776241}
   - {fileID: 2122811110}
   - {fileID: 28867500}
   m_Father: {fileID: 0}
@@ -2589,6 +2625,7 @@ MonoBehaviour:
   colorChooseDisplay: {fileID: 28867499}
   currentCardDisplay: {fileID: 895872506}
   deckDisplay: {fileID: 198428735}
+  gameDisplay: {fileID: 2122811113}
   faceCardsA:
   - Description: Gura Collab
     Color: Blue
@@ -3065,7 +3102,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 472, y: 95.807}
+  m_AnchoredPosition: {x: 1157, y: 542.96}
   m_SizeDelta: {x: 300.0883, y: 220.9257}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &895872506
@@ -4289,10 +4326,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2122811110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -187.6707, y: -3.7327}
-  m_SizeDelta: {x: 488.6588, y: 57.4653}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -38}
+  m_SizeDelta: {x: -1176.3987, y: -941}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1706295019
 MonoBehaviour:
@@ -4661,7 +4698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 804857600}
-  center: {fileID: 2122811110}
+  center: {fileID: 519776241}
   red: {fileID: 636922315}
   yellow: {fileID: 174296594}
   green: {fileID: 200510910}
@@ -5488,7 +5525,7 @@ GameObject:
   - component: {fileID: 2122811111}
   - component: {fileID: 2122811113}
   m_Layer: 5
-  m_Name: Game Center Panel
+  m_Name: Game Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5512,8 +5549,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -147.71204, y: 0}
-  m_SizeDelta: {x: -1003.5825, y: -888.3865}
+  m_AnchoredPosition: {x: 0, y: 0.0024414062}
+  m_SizeDelta: {x: 0, y: 0.0050049}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2122811111
 MonoBehaviour:
@@ -5522,7 +5559,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122811109}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -5565,6 +5602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e16709f395d4044a735e4972d838dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardText: {fileID: 1706295019}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

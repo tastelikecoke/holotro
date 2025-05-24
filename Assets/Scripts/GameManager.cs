@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("References")]
     [SerializeField]
     private HandDisplay yourHandDisplay;
     [SerializeField]
@@ -14,6 +15,11 @@ public class GameManager : MonoBehaviour
     private CardDisplay currentCardDisplay;
     [SerializeField]
     private DeckDisplay deckDisplay;
+    [SerializeField]
+    private GameDisplay gameDisplay;
+
+
+    [Header("Cards")]
     [SerializeField]
     private List<Card> faceCardsA;
     [SerializeField]
@@ -86,14 +92,13 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator ProcessGameCR()
     {
-        for( int i = 0; i < 1000; i++)
+        for( int i = 0; i < 10000; i++)
         {
             deckDisplay.Populate(deck);
             takenCard = null;
             takenWildCard = null;
+            gameDisplay.DisplayText("Post a video!");
             yield return new WaitUntil(() => takenCard != null);
-
-
 
             if (currentCard == null || takenWildCard != null)
             {
@@ -128,21 +133,31 @@ public class GameManager : MonoBehaviour
                 yourHand.Add(Pop(deck));
                 if (deck.Count <= 0)
                 {
+                    yield return JudgeGameCR();
                     yield break;
                 }
                 yourHand.Add(Pop(deck));
                 if (deck.Count <= 0)
                 {
+                    yield return JudgeGameCR();
                     yield break;
                 }
             }
+
             currentCardDisplay.Populate(currentCard);
             currentCardDisplay.gameObject.SetActive(true);
 
             yourHandDisplay.Populate(yourHand);
             deckDisplay.Populate(deck);
 
-            yield return new WaitForSeconds(2.0f);
+            if (yourHand.Count <= 0)
+            {
+                yield return JudgeGameCR();
+                yield break;
+            }
+
+            gameDisplay.DisplayText("Evilrys is thinking...");
+            yield return new WaitForSeconds(4.0f);
 
             List<Card> enemyChoices = new List<Card>();
             foreach (Card enemyCard in enemyHand)
@@ -171,11 +186,13 @@ public class GameManager : MonoBehaviour
                 enemyHand.Add(Pop(deck));
                 if (deck.Count <= 0)
                 {
+                    yield return JudgeGameCR();
                     yield break;
                 }
                 enemyHand.Add(Pop(deck));
                 if (deck.Count <= 0)
                 {
+                    yield return JudgeGameCR();
                     yield break;
                 }
             }
@@ -199,11 +216,39 @@ public class GameManager : MonoBehaviour
                 currentCardDisplay.Populate(currentCard);
             }
 
+            gameDisplay.DisplayText("Evilrys posts a video!");
             enemyHandDisplay.PutCard(currentCard);
             yield return new WaitForSeconds(1.0f);
             enemyHandDisplay.Populate(enemyHand);
+
+            if (enemyHand.Count <= 0)
+            {
+                yield return JudgeGameCR();
+                yield break;
+            }
+        }
+    }
+
+    public IEnumerator JudgeGameCR()
+    {
+        if (yourHand.Count == 0)
+        {
+            gameDisplay.DisplayText("You win!!");
         }
 
+        if (enemyHand.Count == 0)
+        {
+            gameDisplay.DisplayText("Evilrys wins...");
+        }
+
+        if (deck.Count <= 0)
+        {
+            if (enemyHand.Count > yourHand.Count)
+            {
+                gameDisplay.DisplayText("You win!!");
+            }
+        }
+        yield break;
     }
 
     public void TakeCard(Card card)
