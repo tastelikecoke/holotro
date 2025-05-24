@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -12,10 +14,13 @@ public class Card
 
 public class CardDisplay : MonoBehaviour
 {
-    private Card currentCard;
+    [NonSerialized]
+    public Card currentCard;
 
     [SerializeField]
     private GameManager gameManager;
+    [SerializeField]
+    private Transform center;
     [SerializeField]
     private GameObject red;
     [SerializeField]
@@ -45,6 +50,20 @@ public class CardDisplay : MonoBehaviour
 
     public void OnClick()
     {
-        gameManager.TakeCard(currentCard);
+        transform.SetParent(center.transform, true);
+        StartCoroutine(OnUseCard(() =>
+            gameManager.TakeCard(currentCard)));
+    }
+    public IEnumerator OnUseCard(Action callback = null)
+    {
+        var originalPosition = transform.position;
+        for (int i = 0; i < 120; i++)
+        {
+            transform.position = Vector3.Lerp(transform.position, center.position, (float)i/120.0f);
+            yield return new WaitForEndOfFrame();
+        }
+        this.gameObject.SetActive(false);
+        Destroy(this.gameObject);
+        callback?.Invoke();
     }
 }

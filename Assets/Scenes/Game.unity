@@ -929,8 +929,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1721, y: -575}
-  m_SizeDelta: {x: 300.0883, y: 220.9257}
+  m_AnchoredPosition: {x: 1706.6167, y: -536.6443}
+  m_SizeDelta: {x: 271.3217, y: 144.2143}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &198428732
 MonoBehaviour:
@@ -1335,10 +1335,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 198428731}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25, y: 14}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -11, y: -20}
+  m_SizeDelta: {x: -72, y: -94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &510913531
 MonoBehaviour:
@@ -1830,6 +1830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 804857600}
+  center: {fileID: 2122811110}
   red: {fileID: 954698947}
   yellow: {fileID: 593937906}
   green: {fileID: 641686647}
@@ -3080,6 +3081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
+  center: {fileID: 0}
   red: {fileID: 1907902017}
   yellow: {fileID: 1068825888}
   green: {fileID: 133552295}
@@ -3674,10 +3676,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 198428731}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25, y: 64}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -11, y: 30}
+  m_SizeDelta: {x: -72, y: -94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1142204863
 MonoBehaviour:
@@ -4289,8 +4291,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -332, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -187.6707, y: -3.7327}
+  m_SizeDelta: {x: 488.6588, y: 57.4653}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1706295019
 MonoBehaviour:
@@ -4312,7 +4314,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Your Turn.
+  m_text: Post Your Video!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4659,6 +4661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 804857600}
+  center: {fileID: 2122811110}
   red: {fileID: 636922315}
   yellow: {fileID: 174296594}
   green: {fileID: 200510910}
@@ -5483,8 +5486,9 @@ GameObject:
   - component: {fileID: 2122811110}
   - component: {fileID: 2122811112}
   - component: {fileID: 2122811111}
+  - component: {fileID: 2122811113}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Game Center Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5549,6 +5553,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122811109}
   m_CullTransparentMesh: 1
+--- !u!114 &2122811113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122811109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9e16709f395d4044a735e4972d838dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

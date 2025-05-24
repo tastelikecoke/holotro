@@ -94,6 +94,8 @@ public class GameManager : MonoBehaviour
             Debug.Log(takenCard);
             yield return new WaitUntil(() => takenCard != null);
 
+
+
             if (currentCard == null || takenWildCard != null)
             {
                 if(takenWildCard != null)
@@ -198,9 +200,10 @@ public class GameManager : MonoBehaviour
                 currentCardDisplay.Populate(currentCard);
             }
 
+            enemyHandDisplay.PutCard(currentCard);
+            yield return new WaitForSeconds(1.0f);
             enemyHandDisplay.Populate(enemyHand);
         }
-
 
     }
 

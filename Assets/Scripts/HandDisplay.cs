@@ -16,7 +16,8 @@ public class HandDisplay : MonoBehaviour
         prefab.gameObject.SetActive(false);
         foreach (var cardDisplay in cardDisplays)
         {
-            Destroy(cardDisplay.gameObject);
+            if(cardDisplay != null)
+                Destroy(cardDisplay.gameObject);
         }
 
         cardDisplays.Clear();
@@ -27,6 +28,17 @@ public class HandDisplay : MonoBehaviour
             cardDisplay.gameObject.SetActive(true);
             cardDisplays.Add(cardDisplay);
             cardDisplay.Populate(cards[i]);
+        }
+    }
+
+    public void PutCard(Card card)
+    {
+        foreach (var cardDisplay in cardDisplays)
+        {
+            if (cardDisplay.currentCard == card)
+            {
+                StartCoroutine(cardDisplay.OnUseCard());
+            }
         }
     }
 }
