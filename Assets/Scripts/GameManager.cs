@@ -231,6 +231,8 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator JudgeGameCR()
     {
+        deckDisplay.Populate(deck);
+
         if (yourHand.Count == 0)
         {
             gameDisplay.DisplayText("You win!!");
@@ -246,6 +248,14 @@ public class GameManager : MonoBehaviour
             if (enemyHand.Count > yourHand.Count)
             {
                 gameDisplay.DisplayText("You win!!");
+            }
+            if (enemyHand.Count < yourHand.Count)
+            {
+                gameDisplay.DisplayText("Evilrys wins...");
+            }
+            if (enemyHand.Count == yourHand.Count)
+            {
+                gameDisplay.DisplayText("You win for now...");
             }
         }
         yield break;
