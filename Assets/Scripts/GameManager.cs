@@ -89,9 +89,15 @@ public class GameManager : MonoBehaviour
 
     public bool IsYourTurn()
     {
-        return takenCard == null && takenWildCard == null;
+        return IsNull(takenCard) && IsNull(takenWildCard);
     }
 
+    public bool IsNull(Card card)
+    {
+        if (card is null) return true;
+        if (string.IsNullOrEmpty(card.Color)) return true;
+        return false;
+    }
 
     public IEnumerator ProcessGameCR()
     {
@@ -101,11 +107,11 @@ public class GameManager : MonoBehaviour
             takenCard = null;
             takenWildCard = null;
             gameDisplay.DisplayText("Start a stream!");
-            yield return new WaitUntil(() => takenCard != null);
+            yield return new WaitUntil(() => !IsNull(takenCard));
 
-            if (currentCard == null || takenWildCard != null)
+            if (IsNull(currentCard) || !IsNull(takenWildCard))
             {
-                if(takenWildCard != null)
+                if(!IsNull(takenWildCard))
                     yourHand.Remove(takenWildCard);
                 else
                     yourHand.Remove(takenCard);
@@ -114,16 +120,16 @@ public class GameManager : MonoBehaviour
             }
             else if (takenCard.Color == currentCard.Color)
             {
-                if(takenWildCard != null)
+                if(!IsNull(takenWildCard))
                     yourHand.Remove(takenWildCard);
                 else
                     yourHand.Remove(takenCard);
                 currentCard = takenCard;
                 Debug.Log("Color match");
             }
-            else if (takenCard.Face == currentCard.Face)
+            else if (takenCard.Face ==  currentCard.Face)
             {
-                if(takenWildCard != null)
+                if(!IsNull(takenWildCard))
                     yourHand.Remove(takenWildCard);
                 else
                     yourHand.Remove(takenCard);
@@ -271,7 +277,7 @@ public class GameManager : MonoBehaviour
 
     public void TakeCard(Card card)
     {
-        if (takenCard != null) return;
+        if (!IsNull(takenCard)) return;
 
         if (card.Color == "Wildcard")
         {
@@ -292,16 +298,14 @@ public class GameManager : MonoBehaviour
 
     public void ChooseColor(string chosenColor)
     {
-        takenWildCard.Color = chosenColor;
-
-        takenCard = takenWildCard;
+        takenCard = takenWildCard.Clone();
+        takenCard.Color = chosenColor;
         colorChooseDisplay.SetActive(false);
     }
     public void ChooseFace(string chosenFace)
     {
-        takenWildCard.Face = chosenFace;
-
-        takenCard = takenWildCard;
+        takenCard = takenWildCard.Clone();
+        takenCard.Face = chosenFace;
         faceChoiceDisplay.gameObject.SetActive(false);
     }
 

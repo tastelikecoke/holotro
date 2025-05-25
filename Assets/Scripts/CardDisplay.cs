@@ -1,15 +1,41 @@
 using System;
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
 [System.Serializable]
-public class Card
+public class Card : IEquatable<Card>
 {
     public string Description;
     public string Color;
     public string Face;
+
+    public Card Clone()
+    {
+        return new Card() { Description = Description, Color = Color, Face = Face, };
+    }
+
+    public bool Equals(Card other)
+    {
+        if (other is null)
+            return false;
+        if (ReferenceEquals(this, other))
+            return true;
+        return Description == other.Description && Color == other.Color && Face == other.Face;
+    }
+    public override bool Equals(object obj)
+    {
+        if (obj is null)
+            return false;
+        if (ReferenceEquals(this, obj))
+            return true;
+        if (obj.GetType() != GetType())
+            return false;
+        return Equals((Card)obj);
+    }
+    public override int GetHashCode() => HashCode.Combine(Description, Color, Face);
 }
 
 public class CardDisplay : MonoBehaviour
@@ -57,8 +83,9 @@ public class CardDisplay : MonoBehaviour
         if (!gameManager.IsYourTurn()) return;
 
         transform.SetParent(center.transform, true);
+        Card card = currentCard.Clone();
         StartCoroutine(OnUseCard(() =>
-            gameManager.TakeCard(currentCard)));
+            gameManager.TakeCard(card)));
     }
     public IEnumerator OnUseCard(Action callback = null)
     {
@@ -66,7 +93,6 @@ public class CardDisplay : MonoBehaviour
         const float duration = 0.5f;
         for (float i = 0f; i < duration; )
         {
-            yield return new WaitForEndOfFrame();
             i += Time.deltaTime;
             if (this == null)
             {
@@ -77,6 +103,7 @@ public class CardDisplay : MonoBehaviour
             var curveValue = curve.Evaluate(i / duration);
 
             transform.position = Vector3.Lerp(originalPosition, center.position, curveValue);
+            yield return new WaitForEndOfFrame();
         }
         this.gameObject.SetActive(false);
         Destroy(this.gameObject);
