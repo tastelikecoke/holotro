@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e8215aa63d0a214eb4de903eb7c3776, type: 3}
+  m_Name: Deck 1
+  m_EditorClassIdentifier: 
+  faceCards:
+  - Description: Gura Collab
+    Color: Blue
+    Face: Ace
+  - Description: Ame Collab
+    Color: Yellow
+    Face: Jester
+  - Description: Kiara Collab
+    Color: Red
+    Face: Queen
+  - Description: Calli Collab
+    Color: Red
+    Face: King
+  - Description: Ina Collab
+    Color: Blue
+    Face: Jack
+  karaokeCards:
+  - Description: Vocaloid Karaoke
+    Color: Blue
+    Face: Wildcard
+  - Description: Unarchived Karaoke
+    Color: Green
+    Face: Wildcard
+  - Description: Anisong Karaoke
+    Color: Red
+    Face: Wildcard
+  - Description: Collab Karaoke
+    Color: Red
+    Face: Wildcard
+  wildCards:
+  - Description: ASMR
+    Color: Wildcard
+    Face: Queen
+  - Description: Movie
+    Color: Wildcard
+    Face: King
+  - Description: Just Chatting
+    Color: Wildcard
+    Face: Jack
+  - Description: Announcement
+    Color: Wildcard
+    Face: Ace
+  - Description: ???
+    Color: Wildcard
+    Face: Ace
+  otherCards: []
+  gameFacesAmount: 3
+  gameColors:
+  - Color: Red
+    Description: Apex Legends
+  - Color: Yellow
+    Description: Stickmin
+  - Color: Green
+    Description: Minecraft
+  - Color: Blue
+    Description: Subnautica

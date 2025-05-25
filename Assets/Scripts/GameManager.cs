@@ -18,16 +18,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameDisplay gameDisplay;
 
-
-    [Header("Cards")]
     [SerializeField]
-    private List<Card> faceCardsA;
-    [SerializeField]
-    private List<Card> faceCardsB;
-    [SerializeField]
-    private List<Card> karaokeCards;
-    [SerializeField]
-    private List<Card> wildCards;
+    private DeckConfig currentDeckConfig;
 
 
     private List<Card> deck;
@@ -49,20 +41,19 @@ public class GameManager : MonoBehaviour
     private void BeginGame()
     {
         deck = new List<Card>();
-        deck.AddRange(faceCardsA);
-        //deck.AddRange(karaokeCards);
-        deck.AddRange(wildCards);
+        deck.AddRange(currentDeckConfig.faceCards);
+        deck.AddRange(currentDeckConfig.wildCards);
 
         string[] colors = {"Red", "Green", "Blue", "Yellow"};
         //string[] faces = {"Ace", "King", "Queen", "Jack", "Jester"};
-        for (int i = 0; i < colors.Length; i++)
+        for (int i = 0; i < currentDeckConfig.gameColors.Count; i++)
         {
-            for (int j = 1; j <= 9; j++)
+            for (int j = 1; j <= currentDeckConfig.gameFacesAmount; j++)
             {
                 var card = new Card();
-                card.Color = colors[i];
+                card.Color = currentDeckConfig.gameColors[i].Color;
                 card.Face = j.ToString();
-                card.Description = "Game";
+                card.Description = currentDeckConfig.gameColors[i].Description;
 
                 deck.Add(card);
 
