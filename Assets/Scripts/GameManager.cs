@@ -284,7 +284,7 @@ public class GameManager : MonoBehaviour
             takenWildCard = card;
             colorChooseDisplay.SetActive(true);
         }
-        if (card.Face == "Wildcard")
+        else if (card.Face == "Wildcard")
         {
             takenWildCard = card;
             faceChoiceDisplay.gameObject.SetActive(true);
