@@ -7,6 +7,8 @@ public class GameDisplay : MonoBehaviour
     private TMP_Text cardText;
     [SerializeField]
     private TMP_Text dateText;
+    [SerializeField]
+    private TMP_Text dateHoverText;
 
     [SerializeField]
     private GameObject thinkRys;
@@ -17,9 +19,10 @@ public class GameDisplay : MonoBehaviour
     [SerializeField]
     private GameObject nextMonthButton;
 
-    public void DisplayDate(string text)
+    public void DisplayDate(string text, int level)
     {
         dateText.text = text;
+        dateHoverText.text = $"{level} out of 9 months has passed!";
     }
     public void DisplayText(string text)
     {

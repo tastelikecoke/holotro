@@ -59,6 +59,8 @@ public class CardDisplay : MonoBehaviour
     private GameObject blue;
     [SerializeField]
     private GameObject wildCard;
+    [SerializeField]
+    public TMP_Text hoverText;
 
     [SerializeField]
     private TMP_Text cardText;
@@ -87,9 +89,24 @@ public class CardDisplay : MonoBehaviour
         blue.SetActive(currentCard.Color == "Blue");
         wildCard.SetActive(currentCard.Color == "Wildcard");
 
+        if (currentCard.Face == "Wildcard")
+        {
+            hoverText.text = "choose any face when used.";
+        }
+        else if (currentCard.Color == "Wildcard")
+        {
+            hoverText.text = "choose any color when used.";
+        }
+        else
+        {
+            hoverText.text = "use if matching color or face.";
+        }
+
         if(GetComponent<CanvasGroup>() != null && gameManager != null)
             GetComponent<CanvasGroup>().interactable = gameManager.IsYourTurn();
+
     }
+
 
     public void OnClick()
     {

@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        gameDisplay.DisplayDate(currentDeckConfig.deckDate);
+        gameDisplay.DisplayDate(currentDeckConfig.deckDate, persistence.GetLevel());
 
         yourHand = new List<Card>();
         for (int i = 0; i < 5; i++)

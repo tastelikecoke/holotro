@@ -37,6 +37,10 @@ public class Persistence : MonoBehaviour
     {
         return deckConfigs[deckLevel];
     }
+    public int GetLevel()
+    {
+        return deckLevel;
+    }
     public void SetLastCard(Card card)
     {
         lastCard = card.Clone();
