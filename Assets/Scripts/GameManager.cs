@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         persistence = Persistence.Instance;
-        currentDeckConfig = persistence.GetDeckConfig();
+        currentDeckConfig = Instantiate(persistence.GetDeckConfig());
 
         BeginGame();
     }

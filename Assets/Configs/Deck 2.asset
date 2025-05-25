@@ -59,10 +59,10 @@ MonoBehaviour:
     Color: Wildcard
     Face: Ace
   otherCards: []
-  gameFacesAmount: 3
+  gameFacesAmount: 5
   gameColors:
   - Color: Red
-    Description: Apex Legends
+    Description: Mario 2DX
   - Color: Yellow
     Description: Stickmin
   - Color: Green
