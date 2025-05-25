@@ -18,10 +18,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameDisplay gameDisplay;
 
-    [SerializeField]
     private DeckConfig currentDeckConfig;
-
-
+    private Persistence persistence;
     private List<Card> deck;
     private List<Card> yourHand;
     private List<Card> enemyHand;
@@ -36,6 +34,9 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
+        persistence = Persistence.Instance;
+        currentDeckConfig = persistence.GetDeckConfig();
+
         BeginGame();
     }
     private void BeginGame()
@@ -59,6 +60,8 @@ public class GameManager : MonoBehaviour
 
             }
         }
+
+        gameDisplay.DisplayDate(currentDeckConfig.deckDate);
 
         yourHand = new List<Card>();
         for (int i = 0; i < 5; i++)

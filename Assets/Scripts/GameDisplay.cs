@@ -5,6 +5,8 @@ public class GameDisplay : MonoBehaviour
 {
     [SerializeField]
     private TMP_Text cardText;
+    [SerializeField]
+    private TMP_Text dateText;
 
     [SerializeField]
     private GameObject thinkRys;
@@ -13,6 +15,10 @@ public class GameDisplay : MonoBehaviour
     [SerializeField]
     private GameObject sadRys;
 
+    public void DisplayDate(string text)
+    {
+        dateText.text = text;
+    }
     public void DisplayText(string text)
     {
         cardText.text = text;

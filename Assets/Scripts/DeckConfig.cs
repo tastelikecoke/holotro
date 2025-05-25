@@ -13,6 +13,7 @@ public class GameColor
 public class DeckConfig : ScriptableObject
 {
 
+    public string deckDate;
     public List<Card> faceCards;
     public List<Card> karaokeCards;
     public List<Card> wildCards;
