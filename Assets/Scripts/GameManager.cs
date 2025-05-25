@@ -275,6 +275,7 @@ public class GameManager : MonoBehaviour
                 gameDisplay.DisplayWin();
             }
         }
+        persistence.SetLastCard(currentCard);
         yield break;
     }
 
