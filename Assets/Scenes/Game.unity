@@ -1873,6 +1873,30 @@ MonoBehaviour:
   wildCard: {fileID: 940604419}
   cardText: {fileID: 24775866}
   faceText: {fileID: 1105138456}
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &593937906
 GameObject:
   m_ObjectHideFlags: 0
@@ -3080,6 +3104,12 @@ MonoBehaviour:
   wildCard: {fileID: 1735735017}
   cardText: {fileID: 548426611}
   faceText: {fileID: 2077783079}
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &895872507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5430,6 +5460,30 @@ MonoBehaviour:
   wildCard: {fileID: 1495188633}
   cardText: {fileID: 64968284}
   faceText: {fileID: 1506478931}
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &1813578694
 MonoBehaviour:
   m_ObjectHideFlags: 0

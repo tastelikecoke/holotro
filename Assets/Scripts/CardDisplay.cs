@@ -36,6 +36,10 @@ public class CardDisplay : MonoBehaviour
     private TMP_Text cardText;
     [SerializeField]
     private TMP_Text faceText;
+
+    [SerializeField]
+    private AnimationCurve curve;
+
     public void Populate(Card card)
     {
         currentCard = card;
@@ -59,10 +63,20 @@ public class CardDisplay : MonoBehaviour
     public IEnumerator OnUseCard(Action callback = null)
     {
         var originalPosition = transform.position;
-        for (int i = 0; i < 120; i++)
+        const float duration = 0.5f;
+        for (float i = 0f; i < duration; )
         {
-            transform.position = Vector3.Lerp(transform.position, center.position, (float)i/120.0f);
             yield return new WaitForEndOfFrame();
+            i += Time.deltaTime;
+            if (this == null)
+            {
+                callback?.Invoke();
+                yield break;
+            }
+
+            var curveValue = curve.Evaluate(i / duration);
+
+            transform.position = Vector3.Lerp(originalPosition, center.position, curveValue);
         }
         this.gameObject.SetActive(false);
         Destroy(this.gameObject);
