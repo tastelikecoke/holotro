@@ -52,4 +52,10 @@ public class Persistence : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
+    public void ResetLevel()
+    {
+        deckLevel = 0;
+    }
+
+
 }

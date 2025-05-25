@@ -140,9 +140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Start New
-
-    Game'
+  m_text: Back to Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a8ad88690bcd493498e43183750be9f8, type: 2}
   m_sharedMaterial: {fileID: 4532204025162411206, guid: a8ad88690bcd493498e43183750be9f8, type: 2}
@@ -225,9 +223,10 @@ GameObject:
   - component: {fileID: 4629298408074044425}
   - component: {fileID: 6640992732113583290}
   - component: {fileID: 7281627330259616126}
-  - component: {fileID: 2403736510644570775}
+  - component: {fileID: 3258369626180603034}
+  - component: {fileID: 4009470210223006823}
   m_Layer: 5
-  m_Name: Next Month Button
+  m_Name: Start New Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -335,9 +334,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: NextGame
+      - m_Target: {fileID: 4009470210223006823}
+        m_TargetAssemblyTypeName: StartNewDisplay, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -347,18 +346,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!210 &2403736510644570775
-SortingGroup:
+--- !u!225 &3258369626180603034
+CanvasGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4030705398369586290}
   m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortAtRoot: 0
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &4009470210223006823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4030705398369586290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0430a955fbaa6b4d80d28976cddfb97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7432849718131420367
 GameObject:
   m_ObjectHideFlags: 0
