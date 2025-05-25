@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
         //string[] faces = {"Ace", "King", "Queen", "Jack", "Jester"};
         for (int i = 0; i < currentDeckConfig.gameColors.Count; i++)
         {
-            for (int j = 1; j <= currentDeckConfig.gameFacesAmount; j++)
+            for (int j = 2; j <= currentDeckConfig.gameFacesAmount; j++)
             {
                 var card = new Card();
                 card.Color = currentDeckConfig.gameColors[i].Color;
@@ -103,9 +103,12 @@ public class GameManager : MonoBehaviour
     {
         for( int i = 0; i < 10000; i++)
         {
+            yourHandDisplay.SetPassPanel(!IsNull(currentCard));
+
             deckDisplay.Populate(deck);
             takenCard = null;
             takenWildCard = null;
+            yourHandDisplay.Populate(yourHand);
             gameDisplay.DisplayText("Start a stream!");
             yield return new WaitUntil(() => !IsNull(takenCard));
 

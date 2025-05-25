@@ -44,7 +44,7 @@ MonoBehaviour:
     Color: Wildcard
     Face: Jester
   otherCards: []
-  gameFacesAmount: 3
+  gameFacesAmount: 4
   gameColors:
   - Color: Red
     Description: Apex Legends

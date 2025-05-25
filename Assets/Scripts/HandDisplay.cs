@@ -12,26 +12,50 @@ public class HandDisplay : MonoBehaviour
 
     private List<CardDisplay> cardDisplays;
 
+    public void SetPassPanel(bool value)
+    {
+        passPrefab.SetActive(value);
+    }
+
     public void Populate(List<Card> cards)
     {
         if(cardDisplays == null)
             cardDisplays = new List<CardDisplay>();
 
         prefab.gameObject.SetActive(false);
-        foreach (var cardDisplay in cardDisplays)
+        for (int i = cardDisplays.Count-1; i >= 0; i--)
         {
-            if(cardDisplay != null)
-                Destroy(cardDisplay.gameObject);
+            if (cardDisplays[i] == null)
+            {
+                cardDisplays.RemoveAt(i);
+            }
         }
-
-        cardDisplays.Clear();
 
         for (int i = 0; i < cards.Count; i++)
         {
-            var cardDisplay = Instantiate(prefab, transform);
-            cardDisplay.gameObject.SetActive(true);
-            cardDisplays.Add(cardDisplay);
+            CardDisplay cardDisplay = null;
+            if (cardDisplays.Count > i)
+            {
+                cardDisplay = cardDisplays[i];
+                cardDisplays[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                cardDisplay = Instantiate(prefab, transform);
+                cardDisplays.Add(cardDisplay);
+                cardDisplay.gameObject.SetActive(true);
+                var animator = cardDisplay.GetComponentInChildren<Animator>();
+
+                if (animator != null)
+                    animator.speed = Random.Range(0.80f, 1.2f);
+            }
+            cardDisplays[i].GetComponent<CanvasGroup>().alpha = 1;
             cardDisplay.Populate(cards[i]);
+        }
+
+        for (int i = cardDisplays.Count - 1; i >= cards.Count; i--)
+        {
+            cardDisplays[i].gameObject.SetActive(false);
         }
 
         if(passPrefab != null)

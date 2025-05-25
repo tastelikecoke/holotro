@@ -74,7 +74,7 @@ MonoBehaviour:
     Color: Wildcard
     Face: Jack
   otherCards: []
-  gameFacesAmount: 5
+  gameFacesAmount: 8
   gameColors:
   - Color: Red
     Description: Apex Legends

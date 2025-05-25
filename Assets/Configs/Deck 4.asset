@@ -80,7 +80,7 @@ MonoBehaviour:
     Color: Wildcard
     Face: Jester
   otherCards: []
-  gameFacesAmount: 7
+  gameFacesAmount: 8
   gameColors:
   - Color: Red
     Description: Among Us

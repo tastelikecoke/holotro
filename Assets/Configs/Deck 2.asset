@@ -59,7 +59,7 @@ MonoBehaviour:
     Color: Wildcard
     Face: Jack
   otherCards: []
-  gameFacesAmount: 5
+  gameFacesAmount: 6
   gameColors:
   - Color: Red
     Description: Mario 2DX

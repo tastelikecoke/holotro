@@ -3,6 +3,8 @@ using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 
 [System.Serializable]
@@ -62,6 +64,8 @@ public class CardDisplay : MonoBehaviour
     private TMP_Text cardText;
     [SerializeField]
     private TMP_Text faceText;
+    [SerializeField]
+    private GameObject jokerText;
 
     [SerializeField]
     private AnimationCurve curve;
@@ -70,12 +74,21 @@ public class CardDisplay : MonoBehaviour
     {
         currentCard = card;
         cardText.text = currentCard.Description;
-        faceText.text = currentCard.Face;
+        jokerText.SetActive(currentCard.Face == "Jester");
+        faceText.gameObject.SetActive(currentCard.Face != "Jester");
+        faceText.text = currentCard.Face.Substring(0, 1);
+        if (currentCard.Face == "Wildcard")
+            faceText.text = "?";
+
+
         red.SetActive(currentCard.Color == "Red");
         yellow.SetActive(currentCard.Color == "Yellow");
         green.SetActive(currentCard.Color == "Green");
         blue.SetActive(currentCard.Color == "Blue");
         wildCard.SetActive(currentCard.Color == "Wildcard");
+
+        if(GetComponent<CanvasGroup>() != null && gameManager != null)
+            GetComponent<CanvasGroup>().interactable = gameManager.IsYourTurn();
     }
 
     public void OnClick()
