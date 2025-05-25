@@ -4,7 +4,11 @@ using UnityEngine;
 public class HandDisplay : MonoBehaviour
 {
     [SerializeField]
+    private GameManager gameManager;
+    [SerializeField]
     private CardDisplay prefab;
+    [SerializeField]
+    private GameObject passPrefab;
 
     private List<CardDisplay> cardDisplays;
 
@@ -29,6 +33,9 @@ public class HandDisplay : MonoBehaviour
             cardDisplays.Add(cardDisplay);
             cardDisplay.Populate(cards[i]);
         }
+
+        if(passPrefab != null)
+            passPrefab.transform.SetAsFirstSibling();
     }
 
     public void PutCard(Card card)
@@ -40,5 +47,13 @@ public class HandDisplay : MonoBehaviour
                 StartCoroutine(cardDisplay.OnUseCard());
             }
         }
+    }
+    public void Pass()
+    {
+        var card = new Card();
+        card.Color = "Pass";
+        card.Face = "Pass";
+        gameManager.TakeCard(card);
+
     }
 }
