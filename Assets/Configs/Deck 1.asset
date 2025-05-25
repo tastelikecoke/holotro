@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: Deck 1
   m_EditorClassIdentifier: 
   deckDate: July 2021
+  facesAvailable:
+  - Ace
+  - Jester
+  - Queen
+  - King
+  - Jack
   faceCards:
   - Description: Gura Collab
     Color: Blue
@@ -29,19 +35,7 @@ MonoBehaviour:
   - Description: Ina Collab
     Color: Blue
     Face: Jack
-  karaokeCards:
-  - Description: Vocaloid Karaoke
-    Color: Blue
-    Face: Wildcard
-  - Description: Unarchived Karaoke
-    Color: Green
-    Face: Wildcard
-  - Description: Anisong Karaoke
-    Color: Red
-    Face: Wildcard
-  - Description: Collab Karaoke
-    Color: Red
-    Face: Wildcard
+  karaokeCards: []
   wildCards:
   - Description: Just Chatting
     Color: Wildcard

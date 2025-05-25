@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e8215aa63d0a214eb4de903eb7c3776, type: 3}
-  m_Name: Deck 2
+  m_Name: Deck 4
   m_EditorClassIdentifier: 
-  deckDate: August 2021
+  deckDate: October 2021
   facesAvailable:
   - Ace
   - Jester
@@ -35,6 +35,21 @@ MonoBehaviour:
   - Description: Ina Collab
     Color: Blue
     Face: Jack
+  - Description: Bae Collab
+    Color: Red
+    Face: Jester
+  - Description: Sana Collab
+    Color: Yellow
+    Face: Jack
+  - Description: Kronii Collab
+    Color: Blue
+    Face: King
+  - Description: Fauna Collab
+    Color: Green
+    Face: Queen
+  - Description: Mumei Collab
+    Color: Green
+    Face: Ace
   karaokeCards:
   - Description: Vocaloid Karaoke
     Color: Blue
@@ -58,14 +73,20 @@ MonoBehaviour:
   - Description: Just Chatting
     Color: Wildcard
     Face: Jack
+  - Description: Members Amongus
+    Color: Wildcard
+    Face: Ace
+  - Description: Members Chat
+    Color: Wildcard
+    Face: Jester
   otherCards: []
-  gameFacesAmount: 5
+  gameFacesAmount: 7
   gameColors:
   - Color: Red
-    Description: Mario 2DX
+    Description: Among Us
   - Color: Yellow
-    Description: Stickmin
+    Description: Ring Fit
   - Color: Green
     Description: Minecraft
   - Color: Blue
-    Description: Subnautica
+    Description: Titanfall

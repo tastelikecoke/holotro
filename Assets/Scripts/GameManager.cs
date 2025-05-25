@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject colorChooseDisplay;
     [SerializeField]
+    private FaceChoiceDisplay faceChoiceDisplay;
+    [SerializeField]
     private CardDisplay currentCardDisplay;
     [SerializeField]
     private DeckDisplay deckDisplay;
@@ -43,6 +45,7 @@ public class GameManager : MonoBehaviour
     {
         deck = new List<Card>();
         deck.AddRange(currentDeckConfig.faceCards);
+        deck.AddRange(currentDeckConfig.karaokeCards);
         deck.AddRange(currentDeckConfig.wildCards);
 
         string[] colors = {"Red", "Green", "Blue", "Yellow"};
@@ -210,8 +213,8 @@ public class GameManager : MonoBehaviour
                 }
                 if (currentCard.Face == "Wildcard")
                 {
-                    string[] faces = {"King", "Queen", "Jack", "Jester", "Ace"};
-                    currentCard.Face = faces[Random.Range(0, 4)];
+                    int faceCount = currentDeckConfig.facesAvailable.Count;
+                    currentCard.Face = currentDeckConfig.facesAvailable[Random.Range(0, faceCount)];
                 }
                 currentCardDisplay.Populate(currentCard);
             }
@@ -275,6 +278,12 @@ public class GameManager : MonoBehaviour
             takenWildCard = card;
             colorChooseDisplay.SetActive(true);
         }
+        if (card.Face == "Wildcard")
+        {
+            takenWildCard = card;
+            faceChoiceDisplay.gameObject.SetActive(true);
+            faceChoiceDisplay.Populate(currentDeckConfig.facesAvailable);
+        }
         else
         {
             takenCard = card;
@@ -287,6 +296,13 @@ public class GameManager : MonoBehaviour
 
         takenCard = takenWildCard;
         colorChooseDisplay.SetActive(false);
+    }
+    public void ChooseFace(string chosenFace)
+    {
+        takenWildCard.Face = chosenFace;
+
+        takenCard = takenWildCard;
+        faceChoiceDisplay.gameObject.SetActive(false);
     }
 
     public void NextGame()

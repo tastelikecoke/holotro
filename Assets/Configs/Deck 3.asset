@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: Deck 3
   m_EditorClassIdentifier: 
   deckDate: September 2021
+  facesAvailable:
+  - Ace
+  - Jester
+  - Queen
+  - King
+  - Jack
   faceCards:
   - Description: Gura Collab
     Color: Blue
@@ -58,28 +64,22 @@ MonoBehaviour:
     Color: Red
     Face: Wildcard
   wildCards:
-  - Description: ASMR
+  - Description: Members ASMR
     Color: Wildcard
     Face: Queen
-  - Description: Movie
+  - Description: Members Movie
     Color: Wildcard
     Face: King
   - Description: Just Chatting
     Color: Wildcard
     Face: Jack
-  - Description: Announcement
-    Color: Wildcard
-    Face: Ace
-  - Description: ???
-    Color: Wildcard
-    Face: Ace
   otherCards: []
   gameFacesAmount: 5
   gameColors:
   - Color: Red
     Description: Apex Legends
   - Color: Yellow
-    Description: Stickmin
+    Description: Ring Fit
   - Color: Green
     Description: Minecraft
   - Color: Blue
