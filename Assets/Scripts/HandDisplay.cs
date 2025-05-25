@@ -35,7 +35,7 @@ public class HandDisplay : MonoBehaviour
         }
 
         if(passPrefab != null)
-            passPrefab.transform.SetAsFirstSibling();
+            passPrefab.transform.SetAsLastSibling();
     }
 
     public void PutCard(Card card)
