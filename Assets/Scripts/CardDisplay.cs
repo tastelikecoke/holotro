@@ -50,6 +50,8 @@ public class CardDisplay : MonoBehaviour
 
     public void OnClick()
     {
+        if (!gameManager.IsYourTurn()) return;
+
         transform.SetParent(center.transform, true);
         StartCoroutine(OnUseCard(() =>
             gameManager.TakeCard(currentCard)));

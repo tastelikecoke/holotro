@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
         //string[] faces = {"Ace", "King", "Queen", "Jack", "Jester"};
         for (int i = 0; i < colors.Length; i++)
         {
-            for (int j = 1; j <= 5; j++)
+            for (int j = 1; j <= 9; j++)
             {
                 var card = new Card();
                 card.Color = colors[i];
@@ -90,6 +90,12 @@ public class GameManager : MonoBehaviour
     private Card takenWildCard = null;
     private Card takenCard = null;
 
+    public bool IsYourTurn()
+    {
+        return takenCard == null && takenWildCard == null;
+    }
+
+
     public IEnumerator ProcessGameCR()
     {
         for( int i = 0; i < 10000; i++)
@@ -97,7 +103,7 @@ public class GameManager : MonoBehaviour
             deckDisplay.Populate(deck);
             takenCard = null;
             takenWildCard = null;
-            gameDisplay.DisplayText("Post a video!");
+            gameDisplay.DisplayText("Start a stream!");
             yield return new WaitUntil(() => takenCard != null);
 
             if (currentCard == null || takenWildCard != null)
@@ -157,7 +163,7 @@ public class GameManager : MonoBehaviour
             }
 
             gameDisplay.DisplayText("Evilrys is thinking...");
-            yield return new WaitForSeconds(4.0f);
+            yield return new WaitForSeconds(3.0f);
 
             List<Card> enemyChoices = new List<Card>();
             foreach (Card enemyCard in enemyHand)
@@ -236,11 +242,13 @@ public class GameManager : MonoBehaviour
         if (yourHand.Count == 0)
         {
             gameDisplay.DisplayText("You win!!");
+            gameDisplay.DisplayWin();
         }
 
         if (enemyHand.Count == 0)
         {
             gameDisplay.DisplayText("Evilrys wins...");
+            gameDisplay.DisplayLose();
         }
 
         if (deck.Count <= 0)
@@ -248,14 +256,17 @@ public class GameManager : MonoBehaviour
             if (enemyHand.Count > yourHand.Count)
             {
                 gameDisplay.DisplayText("You win!!");
+                gameDisplay.DisplayWin();
             }
             if (enemyHand.Count < yourHand.Count)
             {
                 gameDisplay.DisplayText("Evilrys wins...");
+                gameDisplay.DisplayLose();
             }
             if (enemyHand.Count == yourHand.Count)
             {
                 gameDisplay.DisplayText("You win for now...");
+                gameDisplay.DisplayWin();
             }
         }
         yield break;
