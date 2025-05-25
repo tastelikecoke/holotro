@@ -14,6 +14,8 @@ public class GameDisplay : MonoBehaviour
     private GameObject winRys;
     [SerializeField]
     private GameObject sadRys;
+    [SerializeField]
+    private GameObject nextMonthButton;
 
     public void DisplayDate(string text)
     {
@@ -28,6 +30,7 @@ public class GameDisplay : MonoBehaviour
         thinkRys.gameObject.SetActive(false);
         winRys.gameObject.SetActive(true);
         sadRys.gameObject.SetActive(false);
+        nextMonthButton.SetActive(true);
     }
     public void DisplayLose()
     {

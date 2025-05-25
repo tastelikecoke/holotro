@@ -288,4 +288,10 @@ public class GameManager : MonoBehaviour
         takenCard = takenWildCard;
         colorChooseDisplay.SetActive(false);
     }
+
+    public void NextGame()
+    {
+        if (persistence != null)
+            persistence.NextGame();
+    }
 }
