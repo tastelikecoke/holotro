@@ -36,10 +36,19 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "YabairyS\n\nI came inside of you!";
         yield return new WaitUntil(() => IsTriggered);
         IsTriggered = false;
-        dialogueText.text = "IryS\n\nBaeface.jpg";
+        dialogueText.text = "IryS\n\n*Shock* How dare you say that on stream!";
         yield return new WaitUntil(() => IsTriggered);
         IsTriggered = false;
+        dialogueText.text = "YabairyS\n\nI will say more once I take over your body~";
+        yield return new WaitUntil(() => IsTriggered);
+        IsTriggered = false;
+        dialogueText.text = "IryS\n\nYou can't do that!";
+        yield return new WaitUntil(() => IsTriggered);
+        IsTriggered = false;
+        dialogueText.text = "YabairyS\n\nI can if I win against you on a card game duel!";
 
+        yield return new WaitUntil(() => IsTriggered);
+        IsTriggered = false;
         SceneManager.LoadScene("Game");
     }
 

@@ -8,6 +8,11 @@ public class Persistence : MonoBehaviour
 
     [SerializeField]
     private List<DeckConfig> deckConfigs;
+    public int CardsCount
+    {
+        get;
+        set;
+    }
 
     private int deckLevel;
     private Card lastCard = null;
@@ -55,6 +60,7 @@ public class Persistence : MonoBehaviour
     public void ResetLevel()
     {
         deckLevel = 0;
+        CardsCount = 0;
     }
 
 

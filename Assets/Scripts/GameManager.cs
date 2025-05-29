@@ -109,7 +109,7 @@ public class GameManager : MonoBehaviour
             takenCard = null;
             takenWildCard = null;
             yourHandDisplay.Populate(yourHand);
-            gameDisplay.DisplayText("Start a stream!");
+            gameDisplay.DisplayText("Start streaming! Choose a card.");
             yield return new WaitUntil(() => !IsNull(takenCard));
 
             if (IsNull(currentCard) || !IsNull(takenWildCard))
@@ -120,6 +120,7 @@ public class GameManager : MonoBehaviour
                     yourHand.Remove(takenCard);
                 currentCard = takenCard;
                 Debug.Log("Any match");
+                Persistence.Instance.CardsCount++;
             }
             else if (takenCard.Color == currentCard.Color)
             {
@@ -129,6 +130,7 @@ public class GameManager : MonoBehaviour
                     yourHand.Remove(takenCard);
                 currentCard = takenCard;
                 Debug.Log("Color match");
+                Persistence.Instance.CardsCount++;
             }
             else if (takenCard.Face ==  currentCard.Face)
             {
@@ -138,6 +140,7 @@ public class GameManager : MonoBehaviour
                     yourHand.Remove(takenCard);
                 currentCard = takenCard;
                 Debug.Log("Face match");
+                Persistence.Instance.CardsCount++;
             }
             else
             {
@@ -168,7 +171,7 @@ public class GameManager : MonoBehaviour
                 yield break;
             }
 
-            gameDisplay.DisplayText("Evilrys is thinking...");
+            gameDisplay.DisplayText("YabairyS is thinking...");
             yield return new WaitForSeconds(3.0f);
 
             List<Card> enemyChoices = new List<Card>();
@@ -228,7 +231,7 @@ public class GameManager : MonoBehaviour
                 currentCardDisplay.Populate(currentCard);
             }
 
-            gameDisplay.DisplayText("Evilrys posts a video!");
+            gameDisplay.DisplayText("YabairyS finished her turn!");
             enemyHandDisplay.PutCard(currentCard);
             yield return new WaitForSeconds(1.0f);
             enemyHandDisplay.Populate(enemyHand);
@@ -253,7 +256,7 @@ public class GameManager : MonoBehaviour
 
         if (enemyHand.Count == 0)
         {
-            gameDisplay.DisplayText("Evilrys wins...");
+            gameDisplay.DisplayText("YabairyS wins...");
             gameDisplay.DisplayLose();
         }
 
@@ -266,7 +269,7 @@ public class GameManager : MonoBehaviour
             }
             if (enemyHand.Count < yourHand.Count)
             {
-                gameDisplay.DisplayText("Evilrys wins...");
+                gameDisplay.DisplayText("YabairyS wins...");
                 gameDisplay.DisplayLose();
             }
             if (enemyHand.Count == yourHand.Count)

@@ -9,6 +9,8 @@ public class GameDisplay : MonoBehaviour
     private TMP_Text dateText;
     [SerializeField]
     private TMP_Text dateHoverText;
+    [SerializeField]
+    private TMP_Text finalStatsText;
 
     [SerializeField]
     private GameObject thinkRys;
@@ -40,5 +42,8 @@ public class GameDisplay : MonoBehaviour
         thinkRys.gameObject.SetActive(false);
         winRys.gameObject.SetActive(false);
         sadRys.gameObject.SetActive(true);
+
+        if(finalStatsText != null)
+            finalStatsText.text = $"Farthest Date: {dateText.text}\nAmount of cards used:{Persistence.Instance.CardsCount}";
     }
 }

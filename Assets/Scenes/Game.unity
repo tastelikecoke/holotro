@@ -4894,6 +4894,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641280916}
   m_CullTransparentMesh: 1
+--- !u!114 &1645471932 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4486040993953201869, guid: 6714368660fb14d4684b949186ed4dd3, type: 3}
+  m_PrefabInstance: {fileID: 652260033}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1681858194
 GameObject:
   m_ObjectHideFlags: 0
@@ -6790,6 +6801,7 @@ MonoBehaviour:
   cardText: {fileID: 1706295019}
   dateText: {fileID: 1799412694}
   dateHoverText: {fileID: 1681858196}
+  finalStatsText: {fileID: 1645471932}
   thinkRys: {fileID: 1193206278}
   winRys: {fileID: 1339468525}
   sadRys: {fileID: 652260035}

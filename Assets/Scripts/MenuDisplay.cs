@@ -9,4 +9,9 @@ public class MenuDisplay : MonoBehaviour
         Persistence.Instance.ResetLevel();
         SceneManager.LoadScene("Game");
     }
+    public void Tutorial()
+    {
+        Persistence.Instance.ResetLevel();
+        SceneManager.LoadScene("Tutorial");
+    }
 }
