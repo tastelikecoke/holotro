@@ -727,7 +727,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1681, y: -778}
+  m_AnchoredPosition: {x: 1681, y: -685}
   m_SizeDelta: {x: 271.3217, y: 144.2143}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &198428732
@@ -801,6 +801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deckText: {fileID: 510913531}
+  deckImage: {fileID: 2110729111}
 --- !u!1 &228660859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,8 +1272,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2, y: -20}
-  m_SizeDelta: {x: -72, y: -94}
+  m_AnchoredPosition: {x: 37.454613, y: -89.78601}
+  m_SizeDelta: {x: -191.9089, y: -94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &510913531
 MonoBehaviour:
@@ -1542,7 +1543,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 36, y: -3.619995}
+  m_AnchoredPosition: {x: 0, y: -3.619995}
   m_SizeDelta: {x: -1820, y: -980}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &569998771 stripped
@@ -3341,8 +3342,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2, y: 30}
-  m_SizeDelta: {x: -72, y: -94}
+  m_AnchoredPosition: {x: -68.95703, y: -89.78601}
+  m_SizeDelta: {x: -137.9142, y: -94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1142204863
 MonoBehaviour:
@@ -4115,7 +4116,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 7fccd8f95e6d93e4e96e7004835d75b0, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4691,8 +4692,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 1.1884766}
-  m_SizeDelta: {x: -1176.3987, y: -1019.377}
+  m_AnchoredPosition: {x: 0, y: 166}
+  m_SizeDelta: {x: -1200, y: -1019.377}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1706295019
 MonoBehaviour:
@@ -4748,7 +4749,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -5535,7 +5536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2692055890182467368, guid: 09e4d42de6674694aa492e9b2240f4de, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 997
+      value: 960
       objectReference: {fileID: 0}
     - target: {fileID: 2692055890182467368, guid: 09e4d42de6674694aa492e9b2240f4de, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6301,8 +6302,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.039993286, y: -0.46285248}
-  m_SizeDelta: {x: 0.08828735, y: 0.92570496}
+  m_AnchoredPosition: {x: 0.044143677, y: 58.4141}
+  m_SizeDelta: {x: 0.0883, y: 116.8275}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2110729111
 MonoBehaviour:
@@ -6317,19 +6318,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.28611606, g: 0.28611606, b: 0.3584906, a: 1}
+  m_Color: {r: 0.68355286, g: 0.68355286, b: 0.79622644, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 8ee52fc53bf1b154786d6cffdc432b7d, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillMethod: 1
+  m_FillAmount: 0.5
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
