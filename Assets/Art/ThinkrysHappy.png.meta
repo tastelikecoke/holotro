@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 0cf1e5733e88e1048a080e0be8b5f510
+guid: 0c411d5810f5fee43b6de84bf8b929a9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8140101569868456350
-    second: Thinkrys 1_0
+      213: 1174527297063039873
+    second: ThinkrysHappy_0
   - first:
-      213: -486876600216523148
-    second: Thinkrys 1_1
+      213: 7260123080202643186
+    second: ThinkrysHappy_1
   - first:
-      213: -6974877329483566816
-    second: Thinkrys 1_2
+      213: -4236013299238919527
+    second: ThinkrysHappy_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,11 +119,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Thinkrys 1_0
+      name: ThinkrysHappy_0
       rect:
         serializedVersion: 2
-        x: 133
-        y: 44
+        x: 148
+        y: 26
         width: 1300
         height: 1464
       alignment: 0
@@ -134,18 +134,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 26e146410cc880f80800000000000000
-      internalID: -8140101569868456350
+      spriteID: 18331709a52cc4010800000000000000
+      internalID: 1174527297063039873
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Thinkrys 1_1
+      name: ThinkrysHappy_1
       rect:
         serializedVersion: 2
-        x: 640
-        y: 1427
+        x: 655
+        y: 1409
         width: 112
         height: 108
       alignment: 0
@@ -156,18 +156,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 47ee4aacf444e39f0800000000000000
-      internalID: -486876600216523148
+      spriteID: 2f6e715c97321c460800000000000000
+      internalID: 7260123080202643186
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Thinkrys 1_2
+      name: ThinkrysHappy_2
       rect:
         serializedVersion: 2
-        x: 818
-        y: 1425
+        x: 833
+        y: 1407
         width: 111
         height: 103
       alignment: 0
@@ -178,8 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 021f438f502443f90800000000000000
-      internalID: -6974877329483566816
+      spriteID: 992a8030958a635c0800000000000000
+      internalID: -4236013299238919527
       vertices: []
       indices: 
       edges: []
@@ -198,9 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Thinkrys 1_0: -8140101569868456350
-      Thinkrys 1_1: -486876600216523148
-      Thinkrys 1_2: -6974877329483566816
+      ThinkrysHappy_0: 1174527297063039873
+      ThinkrysHappy_1: 7260123080202643186
+      ThinkrysHappy_2: -4236013299238919527
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

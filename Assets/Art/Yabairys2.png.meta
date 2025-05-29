@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 0cf1e5733e88e1048a080e0be8b5f510
+guid: 298377a9e225dac4d9e5fb17a5887028
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8140101569868456350
-    second: Thinkrys 1_0
-  - first:
-      213: -486876600216523148
-    second: Thinkrys 1_1
-  - first:
-      213: -6974877329483566816
-    second: Thinkrys 1_2
+      213: 234671080182439530
+    second: Yabairys2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Thinkrys 1_0
+      name: Yabairys2_0
       rect:
         serializedVersion: 2
-        x: 133
-        y: 44
-        width: 1300
-        height: 1464
+        x: 293
+        y: 83
+        width: 1059
+        height: 1380
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,52 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 26e146410cc880f80800000000000000
-      internalID: -8140101569868456350
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thinkrys 1_1
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 1427
-        width: 112
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 47ee4aacf444e39f0800000000000000
-      internalID: -486876600216523148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Thinkrys 1_2
-      rect:
-        serializedVersion: 2
-        x: 818
-        y: 1425
-        width: 111
-        height: 103
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 021f438f502443f90800000000000000
-      internalID: -6974877329483566816
+      spriteID: a6ed455aa18b14300800000000000000
+      internalID: 234671080182439530
       vertices: []
       indices: 
       edges: []
@@ -198,9 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Thinkrys 1_0: -8140101569868456350
-      Thinkrys 1_1: -486876600216523148
-      Thinkrys 1_2: -6974877329483566816
+      Yabairys2_0: 234671080182439530
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
