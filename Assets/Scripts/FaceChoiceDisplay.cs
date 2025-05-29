@@ -9,6 +9,8 @@ public class FaceChoiceDisplay : MonoBehaviour
     private GameManager gameManager;
     [SerializeField]
     private GameObject buttonPrefab;
+    [SerializeField]
+    private Transform buttonRoot;
     private List<GameObject> buttonPrefabs;
 
     public void Populate(List<string> allowedFaces)
@@ -26,7 +28,7 @@ public class FaceChoiceDisplay : MonoBehaviour
         buttonPrefabs.Clear();
         for (int i = 0; i < allowedFaces.Count; i++)
         {
-            var button = Instantiate(buttonPrefab, transform);
+            var button = Instantiate(buttonPrefab, buttonRoot);
             button.SetActive(true);
             button.GetComponentInChildren<TMP_Text>().text = allowedFaces[i];
             var face = allowedFaces[i];
