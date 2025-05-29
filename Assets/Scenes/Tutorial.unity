@@ -153,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -233.19348, y: -10.959961}
+  m_AnchoredPosition: {x: -233.19348, y: -10.961}
   m_SizeDelta: {x: -593.1709, y: -138.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &57387340
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 278473633}
   - component: {fileID: 278473632}
   m_Layer: 5
-  m_Name: Start Game Button
+  m_Name: Continue Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -338,9 +338,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1829156442}
-        m_TargetAssemblyTypeName: MenuDisplay, Assembly-CSharp
-        m_MethodName: StartGame
+      - m_Target: {fileID: 709147187}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: Trigger
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -685,6 +685,7 @@ GameObject:
   - component: {fileID: 709147184}
   - component: {fileID: 709147186}
   - component: {fileID: 709147185}
+  - component: {fileID: 709147187}
   m_Layer: 5
   m_Name: Dialogue
   m_TagString: Untagged
@@ -751,6 +752,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709147183}
   m_CullTransparentMesh: 1
+--- !u!114 &709147187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709147183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539bf330af0b52c4eb681b877373594d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 57387340}
 --- !u!1 &740858122
 GameObject:
   m_ObjectHideFlags: 0
