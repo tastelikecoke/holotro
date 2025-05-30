@@ -145,13 +145,19 @@ public class GameManager : MonoBehaviour
             else
             {
                 Debug.Log("No match");
+
+                yield return deckDisplay.GiveCard(yourHandDisplay);
                 yourHand.Add(Pop(deck));
+                yourHandDisplay.Populate(yourHand);
                 if (deck.Count <= 0)
                 {
                     yield return JudgeGameCR();
                     yield break;
                 }
+
+                yield return deckDisplay.GiveCard(yourHandDisplay);
                 yourHand.Add(Pop(deck));
+                yourHandDisplay.Populate(yourHand);
                 if (deck.Count <= 0)
                 {
                     yield return JudgeGameCR();
@@ -198,13 +204,17 @@ public class GameManager : MonoBehaviour
             if (enemyChoices.Count <= 0)
             {
                 Debug.Log("No match");
+                yield return deckDisplay.GiveCard(enemyHandDisplay);
                 enemyHand.Add(Pop(deck));
+                enemyHandDisplay.Populate(enemyHand);
                 if (deck.Count <= 0)
                 {
                     yield return JudgeGameCR();
                     yield break;
                 }
+                yield return deckDisplay.GiveCard(enemyHandDisplay);
                 enemyHand.Add(Pop(deck));
+                enemyHandDisplay.Populate(enemyHand);
                 if (deck.Count <= 0)
                 {
                     yield return JudgeGameCR();
