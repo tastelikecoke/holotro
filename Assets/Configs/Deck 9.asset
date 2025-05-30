@@ -74,23 +74,23 @@ MonoBehaviour:
   - Description: Moona Collab
     Color: Blue
     Face: Queen
-  - Description: Chadscast
-    Color: Red
-    Face: 1
-  - Description: Chadscast
-    Color: Red
-    Face: 2
+  - Description: Suisei Collab
+    Color: Blue
+    Face: King
+  - Description: Watame Collab
+    Color: Yellow
+    Face: King
   karaokeCards:
-  - Description: Vocaloid Karaoke
+  - Description: BirthdayRyS
     Color: Blue
     Face: Wildcard
-  - Description: New Year Karaoke
+  - Description: BirthdayRyS Karaoke
     Color: Green
     Face: Wildcard
-  - Description: New Year Anisong
+  - Description: Birthday Supas
     Color: Red
     Face: Wildcard
-  - Description: New Year Collab
+  - Description: BirthdayRyS Collab
     Color: Yellow
     Face: Wildcard
   wildCards:
@@ -103,23 +103,29 @@ MonoBehaviour:
   - Description: Just Chatting
     Color: Wildcard
     Face: Jack
-  - Description: Members Karaoke
+  - Description: Karaoke Endurance
     Color: Wildcard
     Face: Ace
   - Description: Cover Song
     Color: Wildcard
-    Face: 2
+    Face: 3
   - Description: Cover Song
     Color: Wildcard
-    Face: 3
+    Face: 4
+  - Description: Chadscast
+    Color: Wildcard
+    Face: 4
+  - Description: Chadscast
+    Color: Wildcard
+    Face: 5
   otherCards: []
   gameFacesAmount: 10
   gameColors:
   - Color: Red
-    Description: Needy Streamer Overload
+    Description: Vampire Survivors
   - Color: Yellow
     Description: Elden Ring
   - Color: Green
     Description: Minecraft
   - Color: Blue
-    Description: Operation Tango
+    Description: The Closing Shift
