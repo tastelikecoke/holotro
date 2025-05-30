@@ -78,7 +78,10 @@ public class CardDisplay : MonoBehaviour
         cardText.text = currentCard.Description;
         jokerText.SetActive(currentCard.Face == "Jester");
         faceText.gameObject.SetActive(currentCard.Face != "Jester");
-        faceText.text = currentCard.Face.Substring(0, 1);
+        if (currentCard.Face == "10")
+            faceText.text = "10";
+        else
+            faceText.text = currentCard.Face.Substring(0, 1);
         if (currentCard.Face == "Wildcard")
             faceText.text = "?";
 

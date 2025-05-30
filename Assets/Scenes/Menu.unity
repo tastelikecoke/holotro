@@ -1388,7 +1388,7 @@ PrefabInstance:
     - target: {fileID: 2942576899230613484, guid: 89a64164f4db5d149ac616a64caf2310, type: 3}
       propertyPath: 'deckConfigs.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 27e9423979ebc27469737a7003d98f43, type: 2}
+      objectReference: {fileID: 11400000, guid: d59d39f4374f0f4499809c40418f06f1, type: 2}
     - target: {fileID: 7059807202268957104, guid: 89a64164f4db5d149ac616a64caf2310, type: 3}
       propertyPath: m_LocalPosition.x
       value: 965.7546
