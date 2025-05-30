@@ -31,6 +31,8 @@ public class FaceChoiceDisplay : MonoBehaviour
             var button = Instantiate(buttonPrefab, buttonRoot);
             button.SetActive(true);
             button.GetComponentInChildren<TMP_Text>().text = allowedFaces[i];
+            if (allowedFaces[i] == "Jester")
+                button.GetComponentInChildren<TMP_Text>().text = "Joker";
             var face = allowedFaces[i];
 
             button.GetComponent<Button>().onClick.AddListener(() =>
