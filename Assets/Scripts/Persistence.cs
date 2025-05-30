@@ -67,6 +67,13 @@ public class Persistence : MonoBehaviour
 
     public void NextGame()
     {
+        if (IsLastGame())
+        {
+            deckLevel = 0;
+            SceneManager.LoadScene("Menu");
+            return;
+        }
+
         deckLevel++;
         SceneManager.LoadScene("Game");
     }
@@ -77,5 +84,9 @@ public class Persistence : MonoBehaviour
         CardsCount = 0;
     }
 
+    public bool IsLastGame()
+    {
+        return deckLevel == deckConfigs.Count - 1;
+    }
 
 }
