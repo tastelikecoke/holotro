@@ -39,7 +39,7 @@ public class GameDisplay : MonoBehaviour
     }
     public void DisplayLose()
     {
-        thinkRys.gameObject.SetActive(false);
+        thinkRys.gameObject.SetActive(true);
         winRys.gameObject.SetActive(false);
         sadRys.gameObject.SetActive(true);
 
