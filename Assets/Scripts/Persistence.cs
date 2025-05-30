@@ -26,6 +26,16 @@ public class Persistence : MonoBehaviour
         }
     }
 
+    public void ToggleMute()
+    {
+        GetComponent<AudioSource>().mute = !GetComponent<AudioSource>().mute;
+    }
+
+    public void SetMute(bool isMute = true)
+    {
+        GetComponent<AudioSource>().mute = isMute;
+    }
+
     public void Awake()
     {
         if(_instance == null) _instance = this;
