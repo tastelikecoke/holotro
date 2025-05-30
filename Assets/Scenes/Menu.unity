@@ -1275,8 +1275,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -114}
-  m_SizeDelta: {x: 956.7551, y: 178.4778}
+  m_AnchoredPosition: {x: 0, y: -89.239}
+  m_SizeDelta: {x: 1452.5496, y: 178.4778}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1664005362
 MonoBehaviour:
@@ -1298,7 +1298,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: IryStreaming~
+  m_text: 'HoloUno: IryStreaming~'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a29a4307c819def4685d7a8e99dfa4d5, type: 2}
   m_sharedMaterial: {fileID: 4532204025162411206, guid: a29a4307c819def4685d7a8e99dfa4d5, type: 2}
@@ -1385,6 +1385,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2942576899230613484, guid: 89a64164f4db5d149ac616a64caf2310, type: 3}
+      propertyPath: 'deckConfigs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 27e9423979ebc27469737a7003d98f43, type: 2}
     - target: {fileID: 7059807202268957104, guid: 89a64164f4db5d149ac616a64caf2310, type: 3}
       propertyPath: m_LocalPosition.x
       value: 965.7546

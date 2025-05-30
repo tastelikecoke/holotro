@@ -46,7 +46,7 @@ MonoBehaviour:
     Color: Red
     Face: Wildcard
   - Description: Collab Karaoke
-    Color: Red
+    Color: Yellow
     Face: Wildcard
   wildCards:
   - Description: Members ASMR
@@ -59,7 +59,7 @@ MonoBehaviour:
     Color: Wildcard
     Face: Jack
   otherCards: []
-  gameFacesAmount: 6
+  gameFacesAmount: 5
   gameColors:
   - Color: Red
     Description: Mario 2DX

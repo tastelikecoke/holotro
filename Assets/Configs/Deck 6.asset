@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e8215aa63d0a214eb4de903eb7c3776, type: 3}
-  m_Name: Deck 3
+  m_Name: Deck 6
   m_EditorClassIdentifier: 
-  deckDate: September 2021
+  deckDate: December 2021
   facesAvailable:
   - Ace
   - Jester
@@ -50,37 +50,58 @@ MonoBehaviour:
   - Description: Mumei Collab
     Color: Green
     Face: Ace
+  - Description: Anya Collab
+    Color: Yellow
+    Face: Queen
+  - Description: Ollie Collab
+    Color: Red
+    Face: Jester
+  - Description: Iofi Collab
+    Color: Green
+    Face: King
+  - Description: Haato Collab
+    Color: Yellow
+    Face: King
+  - Description: Sora Collab
+    Color: Blue
+    Face: Queen
   karaokeCards:
   - Description: Vocaloid Karaoke
     Color: Blue
     Face: Wildcard
-  - Description: Unarchived Karaoke
+  - Description: Christmas Karaoke
     Color: Green
     Face: Wildcard
-  - Description: Anisong Karaoke
+  - Description: Christmas Anisong
     Color: Red
     Face: Wildcard
-  - Description: Collab Karaoke
+  - Description: Christmas Collab
     Color: Yellow
     Face: Wildcard
   wildCards:
   - Description: Members ASMR
     Color: Wildcard
     Face: Queen
-  - Description: Members Movie
+  - Description: Initial D Watch
     Color: Wildcard
     Face: King
   - Description: Just Chatting
     Color: Wildcard
     Face: Jack
+  - Description: Members Karaoke
+    Color: Wildcard
+    Face: Ace
+  - Description: Members Chat
+    Color: Wildcard
+    Face: Jester
   otherCards: []
-  gameFacesAmount: 6
+  gameFacesAmount: 9
   gameColors:
   - Color: Red
-    Description: Apex Legends
+    Description: Pokemon
   - Color: Yellow
-    Description: Ring Fit
+    Description: Mario Kart 8dx
   - Color: Green
     Description: Minecraft
   - Color: Blue
-    Description: Titanfall
+    Description: Terraria

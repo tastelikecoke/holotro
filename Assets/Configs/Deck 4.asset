@@ -61,7 +61,7 @@ MonoBehaviour:
     Color: Red
     Face: Wildcard
   - Description: Collab Karaoke
-    Color: Red
+    Color: Yellow
     Face: Wildcard
   wildCards:
   - Description: Members ASMR
@@ -80,7 +80,7 @@ MonoBehaviour:
     Color: Wildcard
     Face: Jester
   otherCards: []
-  gameFacesAmount: 8
+  gameFacesAmount: 7
   gameColors:
   - Color: Red
     Description: Among Us

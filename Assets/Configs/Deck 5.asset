@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e8215aa63d0a214eb4de903eb7c3776, type: 3}
-  m_Name: Deck 3
+  m_Name: Deck 5
   m_EditorClassIdentifier: 
-  deckDate: September 2021
+  deckDate: November 2021
   facesAvailable:
   - Ace
   - Jester
@@ -50,6 +50,15 @@ MonoBehaviour:
   - Description: Mumei Collab
     Color: Green
     Face: Ace
+  - Description: Anya Collab
+    Color: Yellow
+    Face: Queen
+  - Description: Ollie Collab
+    Color: Red
+    Face: Jester
+  - Description: Iofi Collab
+    Color: Green
+    Face: King
   karaokeCards:
   - Description: Vocaloid Karaoke
     Color: Blue
@@ -63,6 +72,9 @@ MonoBehaviour:
   - Description: Collab Karaoke
     Color: Yellow
     Face: Wildcard
+  - Description: Holosports
+    Color: Yellow
+    Face: Wildcard
   wildCards:
   - Description: Members ASMR
     Color: Wildcard
@@ -73,14 +85,20 @@ MonoBehaviour:
   - Description: Just Chatting
     Color: Wildcard
     Face: Jack
+  - Description: Members Amongus
+    Color: Wildcard
+    Face: Ace
+  - Description: Halloween Collab
+    Color: Wildcard
+    Face: Jester
   otherCards: []
-  gameFacesAmount: 6
+  gameFacesAmount: 8
   gameColors:
   - Color: Red
-    Description: Apex Legends
+    Description: Pokemon
   - Color: Yellow
-    Description: Ring Fit
+    Description: FF14
   - Color: Green
     Description: Minecraft
   - Color: Blue
-    Description: Titanfall
+    Description: Resident Evil
