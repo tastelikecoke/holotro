@@ -248,6 +248,7 @@ public class GameManager : MonoBehaviour
     {
         deckDisplay.Populate(deck);
 
+
         if (yourHand.Count == 0)
         {
             gameDisplay.DisplayText("You win!!");
@@ -258,6 +259,12 @@ public class GameManager : MonoBehaviour
         {
             gameDisplay.DisplayText("YabairyS wins...");
             gameDisplay.DisplayLose();
+
+            bool ogMute = Persistence.Instance.GetMute();
+            Persistence.Instance.SetMute(true);
+            yield return new WaitForSeconds(7.0f);
+            Persistence.Instance.SetMute(ogMute);
+
         }
 
         if (deck.Count <= 0)
@@ -271,6 +278,10 @@ public class GameManager : MonoBehaviour
             {
                 gameDisplay.DisplayText("YabairyS wins...");
                 gameDisplay.DisplayLose();
+                bool ogMute = Persistence.Instance.GetMute();
+                Persistence.Instance.SetMute(true);
+                yield return new WaitForSeconds(7.0f);
+                Persistence.Instance.SetMute(ogMute);
             }
             if (enemyHand.Count == yourHand.Count)
             {
