@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e8215aa63d0a214eb4de903eb7c3776, type: 3}
-  m_Name: Deck 8
+  m_Name: Deck 9
   m_EditorClassIdentifier: 
-  deckDate: February 2022
+  deckDate: March 2022 (Bday!)
   facesAvailable:
-  - 2
   - 3
   - 4
   - 5
   - 6
   - 7
   - 8
+  - 9
+  - 10
   faceCards:
   - Description: Gura Collab
     Color: Blue
@@ -83,13 +84,13 @@ MonoBehaviour:
   - Description: Vocaloid Karaoke
     Color: Blue
     Face: Wildcard
-  - Description: Valentines Karaoke
+  - Description: New Year Karaoke
     Color: Green
     Face: Wildcard
-  - Description: Valentines Anisong
+  - Description: New Year Anisong
     Color: Red
     Face: Wildcard
-  - Description: Valentines Collab
+  - Description: New Year Collab
     Color: Yellow
     Face: Wildcard
   wildCards:
